@@ -6,8 +6,8 @@ spring:
       label: master
       server:
         git:
-          uri: https://github.com/maximusyoung007/springCloudDemo
-          searchPaths: springcloudConfig/respo
+          uri: https://gitee.com/maximusyoung007/spring-cloud-demo
+          searchPaths: respo
 euraka:
   client:
     serviceUrl:

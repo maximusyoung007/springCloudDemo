@@ -23,6 +23,11 @@ import java.util.concurrent.TimeUnit;
 @EnableFeignClients
 public class ProductViewServiceFeignApplication {
     public static void main( String[] args ) {
+        int rabbitPort = 5672;
+        if (!NetUtil.isUsableLocalPort(rabbitPort)) {
+            System.err.printf("未在端口%d 发现 rabbitMQ服务，请检查rabbitMQ 是否启动", rabbitPort);
+            System.exit(1);
+        }
         int port = 0;
         int defaultPort = 8050;
         Future<Integer> future = ThreadUtil.execAsync(() -> {
