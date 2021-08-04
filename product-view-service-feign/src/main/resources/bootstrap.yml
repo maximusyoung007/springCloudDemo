@@ -1,11 +1,9 @@
 spring:
   cloud:
     config:
-      label: master
+      name: spring-cloud-config
       profile: dev
+      label: master
+      uri: http://localhost:8060/
       discovery:
-        enabled: true
         service-id: config-server
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8761/eureka/

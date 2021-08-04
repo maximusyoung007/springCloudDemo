@@ -7,7 +7,7 @@ spring:
       server:
         git:
           uri: https://github.com/maximusyoung007/springCloudDemo
-          searchPaths: springCloudConfig/respo
+          searchPaths: springcloudConfig/respo
 euraka:
   client:
     serviceUrl:
