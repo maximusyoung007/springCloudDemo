@@ -2,8 +2,10 @@ package com.maximus.feign.pojo;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
 @Data
-public class Product {
+public class Product implements Serializable {
     private int id;
     private String productName;
     private int price;
@@ -15,6 +17,6 @@ public class Product {
     }
 
     public Product() {
-        
+
     }
 }
