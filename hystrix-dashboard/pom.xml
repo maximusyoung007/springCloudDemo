@@ -5,10 +5,16 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.maximus</groupId>
-  <artifactId>product-view-service-feign</artifactId>
+  <artifactId>hystrix-dashboard</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>product-view-service-feign</name>
+  <parent>
+    <artifactId>springCloudDemo</artifactId>
+    <groupId>com.maximus</groupId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
+  <name>hystrix-dashboard</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
@@ -17,12 +23,6 @@
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
-
-  <parent>
-    <artifactId>springCloudDemo</artifactId>
-    <groupId>com.maximus</groupId>
-    <version>1.0-SNAPSHOT</version>
-  </parent>
 
   <dependencies>
     <dependency>
@@ -34,40 +34,20 @@
 
     <dependency>
       <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-openfeign</artifactId>
-      <version>2.2.9.RELEASE</version>
-    </dependency>
-
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
       <version>2.2.9.RELEASE</version>
     </dependency>
 
     <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-zipkin</artifactId>
-      <version>2.2.8.RELEASE</version>
+      <groupId>org.springframework.boot</groupId>
+      <artifactId>spring-boot-starter-web</artifactId>
+      <version>2.3.12.RELEASE</version>
     </dependency>
 
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-config</artifactId>
-      <version>2.2.8.RELEASE</version>
-    </dependency>
-
-    <!--用于访问路径：/actuator/bus-refresh-->
     <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-actuator</artifactId>
       <version>2.3.12.RELEASE</version>
-    </dependency>
-
-    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-bus-amqp -->
-    <dependency>
-      <groupId>org.springframework.cloud</groupId>
-      <artifactId>spring-cloud-starter-bus-amqp</artifactId>
-      <version>2.2.3.RELEASE</version>
     </dependency>
 
     <dependency>
@@ -75,6 +55,14 @@
       <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
       <version>2.2.8.RELEASE</version>
     </dependency>
+
+    <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-starter-netflix-hystrix-dashboard -->
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+      <version>2.2.8.RELEASE</version>
+    </dependency>
+
 
   </dependencies>
 

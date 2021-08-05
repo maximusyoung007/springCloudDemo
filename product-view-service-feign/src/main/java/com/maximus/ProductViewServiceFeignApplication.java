@@ -8,6 +8,7 @@ import cn.hutool.core.thread.ThreadUtil;
 import cn.hutool.core.util.NumberUtil;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
+import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
@@ -21,6 +22,7 @@ import java.util.concurrent.TimeUnit;
 @EnableEurekaClient
 @EnableDiscoveryClient //用于发现注册中心的微服务
 @EnableFeignClients
+@EnableCircuitBreaker//可以把信息共享给监控中心
 public class ProductViewServiceFeignApplication {
     public static void main( String[] args ) {
         int rabbitPort = 5672;
