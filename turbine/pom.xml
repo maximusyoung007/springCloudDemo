@@ -5,24 +5,24 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com.maximus</groupId>
-  <artifactId>product-view-service-feign</artifactId>
+  <artifactId>turbine</artifactId>
   <version>1.0-SNAPSHOT</version>
 
-  <name>product-view-service-feign</name>
+  <name>turbine</name>
   <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
-
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <maven.compiler.source>1.8</maven.compiler.source>
-    <maven.compiler.target>1.8</maven.compiler.target>
-  </properties>
 
   <parent>
     <artifactId>springCloudDemo</artifactId>
     <groupId>com.maximus</groupId>
     <version>1.0-SNAPSHOT</version>
   </parent>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -73,7 +73,13 @@
     <dependency>
       <groupId>org.springframework.cloud</groupId>
       <artifactId>spring-cloud-starter-netflix-hystrix</artifactId>
-      <version>2.2.8.RELEASE</version>
+      <version>2.2.9.RELEASE</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.springframework.cloud</groupId>
+      <artifactId>spring-cloud-starter-netflix-hystrix-dashboard</artifactId>
+      <version>2.2.9.RELEASE</version>
     </dependency>
 
     <dependency>
@@ -81,7 +87,6 @@
       <artifactId>spring-cloud-starter-netflix-turbine</artifactId>
       <version>2.2.9.RELEASE</version>
     </dependency>
-
   </dependencies>
 
   <build>

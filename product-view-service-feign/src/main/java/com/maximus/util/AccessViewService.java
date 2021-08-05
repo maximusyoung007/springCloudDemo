@@ -5,15 +5,22 @@ import cn.hutool.http.HttpUtil;
 
 public class AccessViewService {
     public static void main(String[] args) {
+
         while(true) {
             ThreadUtil.sleep(1000);
-            try {
-                String html= HttpUtil.get("http://127.0.0.1:8050/getProducts");
-                System.out.println("html length:" + html.length());
-            }
-            catch(Exception e) {
-                System.err.println(e.getMessage());
-            }
+            access(8050);
+            access(8051);
+        }
+
+    }
+
+    public static void access(int port) {
+        try {
+            String html= HttpUtil.get(String.format("http://127.0.0.1:%d/getProducts",port));
+            System.out.printf("%d 地址的视图服务访问成功，返回大小是 %d%n" ,port, html.length());
+        }
+        catch(Exception e) {
+            System.err.printf("%d 地址的视图服务无法访问%n",port);
         }
     }
 }
